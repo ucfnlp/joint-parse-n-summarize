@@ -1,6 +1,6 @@
 # Joint Parsing and Generation for Abstractive Summarization
 
-We provide the source code for the paper **"[Joint Parsing and Generation for Abstractive Summarization]()"**, accepted at AAAI'20. If you find the code useful, please cite the following paper. 
+We provide the source code for the paper **"[Joint Parsing and Generation for Abstractive Summarization](http://i2u.world/kqsong/paper/aaai_kaiqiang_1.pdf)"**, accepted at AAAI'20. If you find the code useful, please cite the following paper. 
 
     @inproceedings{joint-parsing-summarization:2020,
      Author = {Kaiqiang Song and Logan Lebanoff and Qipeng Guo and Xipeng Qiu and Xiangyang Xue and Chen Li and Dong Yu and Fei Liu},
@@ -12,7 +12,7 @@ We provide the source code for the paper **"[Joint Parsing and Generation for Ab
 
 * Our system seeks to re-write a lengthy sentence, often the 1st sentence of a news article, to a concise, title-like summary. The average input and output lengths are 31 words and 8 words, respectively. 
 
-* The code takes as input a text file with one sentence per line. It generates a 2 text files ("summary.txt" and "parse.txt") in the working folder as the outputs, where each source sentence is replaced by a title-like summary and a corresponding dependency parsing tree.
+* The code takes as input a text file with one sentence per line. It generates 2 text files ("summary.txt" and "parse.txt") in the working folder as the outputs, where each source sentence is replaced by a title-like summary and a corresponding dependency parsing tree.
 
 * Example input and output are shown below. 
   > Belgian authorities are investigating the killing of two policewomen and a passerby in the eastern city of Liege on Tuesday as a terror attack, the country's prosecutor said.
@@ -129,4 +129,4 @@ $ pip install pyrouge
 }
 ```
 
-HINT*: 60K batches (used for `earlyStop_bound`) correspond to about 1 epoch for our dataset. 24K batches (used for `rate_Bound`) is slightly less than half of an epoch.
+HINT*: 60K batches (used for `earlyStopping_bound`) correspond to about 1 epoch for our dataset. 24K batches (used for `rateReduce_bound`) is slightly less than half of an epoch.
